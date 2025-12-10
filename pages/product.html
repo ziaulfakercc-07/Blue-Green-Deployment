@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Product Details - ZK Store</title> 
+<link rel="stylesheet" href="style.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font
+awesome/6.0.0/css/all.min.css"> 
+</head> 
+<body> 
+<div class="top-bar"> 
+<div class="container top-links"> 
+<a href="login.html">LOGIN</a> | <a href="signup.html">SIGN 
+UP</a> 
+</div> 
+</div> 
+<header class="header"> 
+<div class="container header-content"> 
+<a href="index.html" class="logo">ZK Store</a> 
+<div class="search-bar"> 
+<input type="text" placeholder="Search in ZK Store"> 
+<button><i class="fas fa-search"></i></button> 
+</div> 
+<a href="#" class="cart-icon" onclick="toggleCart()"> 
+<i class="fas fa-shopping-cart"></i> 
+<span id="cart-count">0</span> 
+</a> 
+</div> 
+</header> 
+<div class="container product-detail-container"> 
+<div class="product-gallery"> 
+<img id="main-product-img" src="https://static
+01.daraz.pk/p/87cba0990494490f23023e9f451f2887.jpg" alt="Main Product"> 
+<div class="thumbnail-list"> 
+<img src="https://static
+01.daraz.pk/p/87cba0990494490f23023e9f451f2887.jpg" 
+onclick="changeImage(this)"> 
+<img src="https://static
+01.daraz.pk/p/a12b934b13098522e85859580b330386.jpg" 
+onclick="changeImage(this)"> 
+<img src="https://static
+01.daraz.pk/p/6b55359160533519803153c892807654.jpg" 
+onclick="changeImage(this)"> 
+</div> 
+</div> 
+<div class="product-main-info"> 
+<h1 class="p-title">Pro White TWS Airpods Sound & High Quality 
+Touch Sensors True Stereo Headphones</h1> 
+<div class="ratings"> 
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i 
+class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star
+half-alt"></i> 
+<span>(2132 Ratings)</span> 
+</div> 
+<div class="brand-link">Brand: <a href="#">No Brand</a></div> 
+<hr style="border: 0; border-top: 1px solid #eff0f5; margin: 10px 
+0;"> 
+<div class="p-price">Rs. 790</div> 
+<div class="p-old-price"><span class="strike">Rs. 4,000</span> 
+80%</div> 
+<div class="quantity-selector"> 
+<span>Quantity</span> 
+<button onclick="updateQty(-1)">-</button> 
+<span id="qty-display">1</span> 
+<button onclick="updateQty(1)">+</button> 
+</div> 
+<div class="action-buttons"> 
+<button class="buy-now">Buy Now</button> 
+<button class="add-cart" onclick="addToCart()">Add to 
+Cart</button> 
+</div> 
+</div> 
+<div class="product-sidebar"> 
+<div class="sidebar-section"> 
+<div class="delivery-header">Delivery Options</div> 
+<div class="sidebar-item"><i class="fas fa-map-marker
+alt"></i> Sindh, Karachi</div> 
+<div class="sidebar-item"><i class="fas fa-shipping
+fast"></i> Standard Delivery <span class="sidebar-price">Rs. 140</span></div> 
+<div class="sidebar-item"><i class="fas fa-money-bill
+wave"></i> Cash on Delivery Available</div> 
+</div> 
+<div class="sidebar-section"> 
+<div class="delivery-header">Return & Warranty</div> 
+<div class="sidebar-item"><i class="fas fa-undo"></i> 14 days 
+easy return</div> 
+</div> 
+</div> 
+</div> 
+<script src="script.js"></script> 
+</body> 
+</html> 

@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>ZK Store - Online Shopping</title> 
+<link rel="stylesheet" href="style.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font
+awesome/6.0.0/css/all.min.css"> 
+<link 
+href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&di
+splay=swap" rel="stylesheet"> 
+</head> 
+<body> 
+<div class="top-bar"> 
+<div class="container top-links"> 
+<a href="#">SAVE MORE ON APP</a> 
+<a href="#">SELL ON ZK STORE</a> 
+<a href="#">CUSTOMER CARE</a> 
+<a href="login.html">LOGIN</a> 
+<a href="signup.html">SIGN UP</a> 
+</div> 
+</div> 
+<header class="header"> 
+<div class="container header-content"> 
+<a href="index.html" class="logo">ZK Store</a> 
+<div class="search-bar"> 
+<input type="text" id="search-input" placeholder="Search in 
+ZK Store"> 
+<button onclick="searchProducts()"><i class="fas fa
+search"></i></button> 
+</div> 
+<a href="#" class="cart-icon" onclick="toggleCart()"> 
+<i class="fas fa-shopping-cart"></i> 
+<span id="cart-count">0</span> 
+</a> 
+</div> 
+</header> 
+<div class="container"> 
+<section class="hero-section"> 
+<ul class="categories"> 
+<li>Electronic Accessories <i class="fas fa-chevron
+right"></i></li> 
+<li>Electronic Devices <i class="fas fa-chevron
+right"></i></li> 
+<li>TV & Home Appliances <i class="fas fa-chevron
+right"></i></li> 
+<li>Health & Beauty <i class="fas fa-chevron-right"></i></li> 
+<li>Babies & Toys <i class="fas fa-chevron-right"></i></li> 
+<li>Groceries & Pets <i class="fas fa-chevron
+right"></i></li> 
+<li>Home & Lifestyle <i class="fas fa-chevron
+right"></i></li> 
+<li>Women's Fashion <i class="fas fa-chevron-right"></i></li> 
+</ul> 
+<div class="banner"> 
+<img id="banner-img" src="https://icms
+image.slatic.net/images/ims-web/bfe8de2c-b737-4265-b191-5c6ddf7f2891.jpg" 
+alt="Banner"> 
+</div> 
+</section> 
+<h3 class="section-header">Flash Sale</h3> 
+<div class="flash-sale-container"> 
+<div class="top-header-fs"> 
+<div class="fs-title-group"> 
+<h3>On Sale Now</h3> 
+<div class="timer-box">Ending in <span id="countdown
+timer">00:00:00</span></div> 
+</div> 
+<div class="shop-all-btn">SHOP ALL PRODUCTS</div> 
+</div> 
+<div class="product-grid"> 
+<div class="product-card" 
+onclick="window.location.href='product.html'"> 
+<img src="https://static
+01.daraz.pk/p/87cba0990494490f23023e9f451f2887.jpg" class="product-img"> 
+<div class="product-info"> 
+<div class="product-title">Pro White TWS Airpods 
+Sound & High Quality</div> 
+<div class="price">Rs. 790</div> 
+<span class="original-price">Rs. 4,000</span> -80% 
+<button class="add-to-cart-btn" 
+onclick="event.stopPropagation(); addToCart()">Add to Cart</button> 
+</div> 
+</div> 
+<div class="product-card"> 
+<img src="https://static
+01.daraz.pk/p/a12b934b13098522e85859580b330386.jpg" class="product-img"> 
+<div class="product-info"> 
+<div class="product-title">D18 Smart Watch Bluetooth 
+Fitness Tracker</div> 
+<div class="price">Rs. 850</div> 
+<span class="original-price">Rs. 1,500</span> -43% 
+<button class="add-to-cart-btn" 
+onclick="addToCart()">Add to Cart</button> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+<script src="script.js"></script> 
+</body> 
+</html> 
