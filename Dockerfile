@@ -1,5 +1,5 @@
-# Use Nginx (a fast web server) as the base foundation
 FROM nginx:alpine
-
-# Copy all your website files (HTML, CSS, JS) into the server
+# Copy custom Nginx config
+COPY nginx.conf /etc/nginx/nginx.conf
+# Copy all project files to web root
 COPY . /usr/share/nginx/html
