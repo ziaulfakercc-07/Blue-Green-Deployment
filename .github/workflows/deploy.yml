@@ -1,0 +1,32 @@
+name: Blue-Green Deployment
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and Push Image
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/zk-store:${{ github.run_number }} .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/zk-store:${{ github.run_number }}
+
+      - name: Deploy to VM
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.VM_IP }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_KEY }}
+          script: |
+            bash /home/ubuntu/deploy-blue-green.sh ${{ secrets.DOCKERHUB_USERNAME }}/zk-store:${{ github.run_number }}
